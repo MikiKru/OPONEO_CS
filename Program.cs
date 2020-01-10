@@ -82,12 +82,25 @@ namespace ParzenieKawy
             }
             return cumSum;
         }
+        // napisz metodę sumującą tylko nieujemne elementy z tablicy
+        public double sumPositiveNumbers(double[] numbers)
+        {
+            double cumSum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] > 0) {
+                    cumSum += numbers[i];   // sum = sum + i
+                }
+            }
+            return cumSum;
+        }
+        // napisz metodę obliczającą ile jest elementów ujemnych w tablicy
 
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
             Program p = new Program();
-            double[] numbers = {3.1, 2.3, 3.3, 5.4};
-            Console.WriteLine(p.sumNumbers(numbers));
+            double[] numbers = {3.1, 2.3, 3.3, 5.4, -1, -2.2};    // tablica wartości typu double
+            Console.WriteLine(p.sumPositiveNumbers(numbers));
             //Console.WriteLine("Podaj liczbę naturalną");
             //int value = int.Parse(Console.ReadLine());
             //p.isEvenNumber(value);
