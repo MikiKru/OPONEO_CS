@@ -75,13 +75,23 @@ namespace ParzenieKawy
             }
             return result;
         }
+        public double sumNumbers(double [] numbers) {
+            double cumSum = 0;
+            for (int i = 0; i < numbers.Length; i++) {
+                cumSum += numbers[i];   // sum = sum + i
+            }
+            return cumSum;
+        }
+
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
             Program p = new Program();
-            Console.WriteLine("Podaj liczbę naturalną");
-            int value = int.Parse(Console.ReadLine());
-            p.isEvenNumber(value);
-            Console.WriteLine(p.isNegativeAndOddNumber(-5));
+            double[] numbers = {3.1, 2.3, 3.3, 5.4};
+            Console.WriteLine(p.sumNumbers(numbers));
+            //Console.WriteLine("Podaj liczbę naturalną");
+            //int value = int.Parse(Console.ReadLine());
+            //p.isEvenNumber(value);
+            //Console.WriteLine(p.isNegativeAndOddNumber(-5));
             //Console.WriteLine(value + "! = " +p.factorialRecurence(value));
            
         }
