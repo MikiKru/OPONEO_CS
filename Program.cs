@@ -9,7 +9,7 @@ namespace ParzenieKawy
     class Program
     {
         // metoda dostarczająca algorytm parzenia kawy
-        public void coffeeGenerator(Boolean dodacMleko, Boolean dodacCukier, int ileCukru) {
+        public void coffeeGenerator(Boolean dodacMleko, Boolean dodacCukier) {
             Console.WriteLine("START");
             Console.WriteLine("Przygotuj składniki");
             Console.WriteLine("Wsyp kawę do filiżanki");
@@ -23,6 +23,9 @@ namespace ParzenieKawy
             // dodawanie cukru
             if (dodacCukier)
             {
+                Console.WriteLine("Ile chcesz cukru: ");
+                int ileCukru = int.Parse(Console.ReadLine());
+
                 // dodawaj sekwencyjnie cukier -> po jednej łyżeczce
                 for (int i = 1; i <= ileCukru; i++)
                 {
@@ -35,7 +38,11 @@ namespace ParzenieKawy
     
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
-
+            // utworzneie obiektu klasy Program
+            Program p = new Program();
+            
+            p.coffeeGenerator(true, true);
+           
         }
     }
 }
