@@ -1,0 +1,7 @@
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\bin\Debug\ParzenieKawy.exe.config
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\bin\Debug\ParzenieKawy.exe
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\bin\Debug\ParzenieKawy.pdb
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\obj\Debug\ParzenieKawy.csprojAssemblyReference.cache
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\obj\Debug\ParzenieKawy.csproj.CoreCompileInputs.cache
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\obj\Debug\ParzenieKawy.exe
+C:\Users\PROXIMO\source\repos\ParzenieKawy\ParzenieKawy\obj\Debug\ParzenieKawy.pdb
