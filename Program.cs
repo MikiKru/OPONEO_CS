@@ -56,14 +56,24 @@ namespace ParzenieKawy
             }
             return n * factorialRecurence(n - 1);
         }
-
+        public void isEvenNumber(int n) {
+            if (n == 0){
+                Console.WriteLine("Podana liczba to zero");
+            }
+            else if (n % 2 == 0){
+                Console.WriteLine("Liczba " + n + " jest parzysta");
+            }
+            else {
+                Console.WriteLine("Liczba " + n + " jest nieparzysta");
+            }
+        }
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
-            // utworzneie obiektu klasy Program
             Program p = new Program();
             Console.WriteLine("Podaj liczbę naturalną");
             int value = int.Parse(Console.ReadLine());
-            Console.WriteLine(value + "! = " +p.factorialRecurence(value));
+            p.isEvenNumber(value);
+            //Console.WriteLine(value + "! = " +p.factorialRecurence(value));
            
         }
     }
