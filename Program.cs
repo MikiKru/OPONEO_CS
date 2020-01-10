@@ -67,12 +67,21 @@ namespace ParzenieKawy
                 Console.WriteLine("Liczba " + n + " jest nieparzysta");
             }
         }
+        public Boolean isNegativeAndOddNumber(int n) {
+            Boolean result = false;
+            if ((n % 2 != 0) && (n < 0)) {        // == spr równości a != spr nierównosci
+                                                  // && - AND || - OR ! - NOT
+                result = !result;       // przypisanie do result wartośc przeciwną
+            }
+            return result;
+        }
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
             Program p = new Program();
             Console.WriteLine("Podaj liczbę naturalną");
             int value = int.Parse(Console.ReadLine());
             p.isEvenNumber(value);
+            Console.WriteLine(p.isNegativeAndOddNumber(-5));
             //Console.WriteLine(value + "! = " +p.factorialRecurence(value));
            
         }
