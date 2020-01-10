@@ -35,13 +35,35 @@ namespace ParzenieKawy
             Console.WriteLine("Zamieszaj");
             Console.WriteLine("STOP");
         }
-    
+
+        // obliczenie n! -> 5 = 5*4*3*2
+        // metoda zwracająca wartość 
+        public int factorial(int n) {
+            if (n == 0) {
+                return 1;
+            }
+            int result = 1;
+            for (int i = n; i > 1; i--) {       // i-- -> i = i - 1
+                //result = result * i;
+                result *= i;
+            }
+            return result;
+        }
+        // rekurencyjna matoda obliczająca silnie
+        public int factorialRecurence(int n) {
+            if (n == 1) {
+                return 1;
+            }
+            return n * factorialRecurence(n - 1);
+        }
+
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
             // utworzneie obiektu klasy Program
             Program p = new Program();
-            
-            p.coffeeGenerator(true, true);
+            Console.WriteLine("Podaj liczbę naturalną");
+            int value = int.Parse(Console.ReadLine());
+            Console.WriteLine(value + "! = " +p.factorialRecurence(value));
            
         }
     }
