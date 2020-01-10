@@ -95,12 +95,23 @@ namespace ParzenieKawy
             return cumSum;
         }
         // napisz metodę obliczającą ile jest elementów ujemnych w tablicy
+        public int countNegativeNumbers(double [] numbers) {
+            int negativeNumbersCouner = 0;
+            foreach (var number in numbers) {
+                if (number < 0) {
+                    negativeNumbersCouner++;
+                }
+            }
+            return negativeNumbersCouner;
+        }
+
 
         static void Main(string[] args)     // od tej metody uruchamia się projekt
         {
             Program p = new Program();
             double[] numbers = {3.1, 2.3, 3.3, 5.4, -1, -2.2};    // tablica wartości typu double
-            Console.WriteLine(p.sumPositiveNumbers(numbers));
+            Console.WriteLine("Ilość liczb ujenych: " + p.countNegativeNumbers(numbers));
+            //Console.WriteLine(p.sumPositiveNumbers(numbers));
             //Console.WriteLine("Podaj liczbę naturalną");
             //int value = int.Parse(Console.ReadLine());
             //p.isEvenNumber(value);
